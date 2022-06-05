@@ -1,0 +1,279 @@
+:root {
+    --cor-de-fondo: pink;
+    --cor-de-fondo1: red;
+    --cor-de-fondo2: rgb(0, 162, 232);
+    --cor-de-fondo3: skyblue;
+    --cor-de-fondo4: #353535;
+    --cor-de-fondo5: #CE7D35;
+    --cor-de-fondo6: #fff;
+    --fonte: Brush Script MT;
+    --tamano-2em: 2em;
+}
+
+
+/*header*/
+
+header {
+    background-color: var(--cor-de-fondo);
+    width: 100%;
+}
+
+
+/*h1 do header*/
+
+header h1 {
+    margin: auto;
+    top: 0px;
+    text-align: center;
+    font-size: 4em;
+    font-family: var(--fonte);
+}
+
+
+/* clase navegador*/
+
+.navegador {
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    background: var(--cor-de-fondo1);
+}
+
+
+/*lista da clase navegador*/
+
+.navegador ul {
+    list-style: none;
+}
+
+
+/*elementos li*/
+
+.secciones li {
+    position: relative;
+    display: inline-block;
+}
+
+
+/*links dentro de li*/
+
+.secciones li a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--cor-de-fondo4-de-fondo);
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+
+/*o pasar sobre os links dentro de li*/
+
+.secciones li a:hover {
+    color: var(--cor-de-fondo5de-fondo);
+}
+
+
+/*clase submenu*/
+
+.submenu {
+    position: absolute;
+    background-color: var(--cor-de-fondo1);
+    visibility: hidden;
+    padding-left: 0;
+    padding-top: 1rem;
+}
+
+
+/*links dentro de li*/
+
+.submenu li a {
+    color: var(--cor-de-fondo6);
+}
+
+
+/*o pasar sobre os li que teñen submenu*/
+
+.secciones li:hover .submenu {
+    visibility: visible;
+}
+
+
+/*formulario formatado en flex*/
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/*táboas do formulario*/
+
+.table_a, .table_b, .table_c {
+    padding: 1% 1%;
+}
+
+/*párrafos do formulario*/
+
+.p_formulario {
+    font-style: oblique;
+    font-size: 1.1em;
+}
+
+
+/*imaxen float*/
+
+#terminos .imgtyc1 {
+    float: left;
+    margin-right: 20px;
+}
+
+
+/*imaxen float*/
+
+#terminos .imgtyc2 {
+    float: right;
+    margin-top: 20px;
+}
+
+
+/*imaxen float*/
+
+#terminos .imgtyc3 {
+    float: left;
+    width: 20%;
+}
+
+
+/*pseuselectores de proba*/
+
+#terminos h2:first-letter {
+    font-size: 2rem;
+}
+
+#terminos h1:first-line {
+    font-weight: bold;
+}
+
+#terminos h2:first-of-type {
+    color: blue;
+}
+
+#terminos h2:last-of-type {
+    color: red;
+}
+
+#terminos h2:nth-of-type(2) {
+    color: green;
+}
+
+#terminos h2:nth-of-type(3n) {
+    color: turquoise;
+}
+
+
+/*clase spanred*/
+
+.spanred {
+    color: var(--cor-de-fondo1);
+}
+
+
+/*clase enviodevolucion*/
+
+.enviodevolucion img {
+    width: 100%;
+}
+
+
+/*clase spam*/
+
+.spam p {
+    display: inline;
+    margin-right: 25px;
+    font-size: 1.5em;
+}
+
+
+/*clase botonclase*/
+
+.botonclase {
+    background-color: var(--cor-de-fondo);
+}
+
+
+/*titulospequenos*/
+
+.titulospequenos {
+    text-align: center;
+    font-family: var(--fonte);
+    font-size: var(--tamano-2em);
+}
+
+
+/*clase asesoramiento*/
+
+.asesoramiento {
+    font-style: oblique;
+    font-size: 1.2em;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: var(--cor-de-fondo2);
+}
+
+
+/*clase footer*/
+
+.footer {
+    display: grid;
+    grid-template-areas: "a b";
+}
+
+
+/*clase a*/
+
+.a {
+    grid-area: a;
+    margin-right: 20px;
+}
+
+
+/*clase b*/
+
+.b {
+    grid-area: b;
+}
+
+
+#terminos {
+    text-align: justify;
+    max-width: 100%;
+}
+
+
+.imgtyc1 {
+    width: 30%;
+}
+
+
+.imgtyc2 {
+    width: 20%;
+}
+
+
+.imgtyc3 {
+    width: 10%;
+}
+
+
+@media (max-width:768px) {
+    .table_a tr, .table_b tr, .table_c tr {
+        display: flex;
+        flex-direction: column;
+    }
+}

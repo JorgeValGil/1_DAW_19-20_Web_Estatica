@@ -1,0 +1,286 @@
+:root {
+    --cor-de-fondo: pink;
+    --cor-de-fondo1: red;
+    --cor-de-fondo2: rgb(0, 162, 232);
+    --cor-de-fondo3: skyblue;
+    --cor-de-fondo4: #353535;
+    --cor-de-fondo5: #CE7D35;
+    --cor-de-fondo6: #fff;
+    --fonte: Brush Script MT;
+    --tamano-2em: 2em;
+}
+
+
+/*header*/
+
+header {
+    background-color: var(--cor-de-fondo);
+    width: 100%;
+}
+
+
+/*h1 do header*/
+
+header h1 {
+    margin: auto;
+    top: 0px;
+    text-align: center;
+    font-size: 4em;
+    font-family: var(--fonte);
+}
+
+
+/* clase navegador*/
+
+.navegador {
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    background: var(--cor-de-fondo1);
+}
+
+
+/*lista da clase navegador*/
+
+.navegador ul {
+    list-style: none;
+}
+
+
+/*clase secciones*/
+
+
+/*elementos li*/
+
+.secciones li {
+    position: relative;
+    display: inline-block;
+}
+
+
+/*links dentro de li*/
+
+.secciones li a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--cor-de-fondo4);
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+
+/*o pasar sobre os links dentro de li*/
+
+.secciones li a:hover {
+    color: var(--cor-de-fondo5);
+}
+
+
+/*clase submenu*/
+
+.submenu {
+    position: absolute;
+    background-color: var(--cor-de-fondo1);
+    visibility: hidden;
+    padding-left: 0;
+    padding-top: 1rem;
+}
+
+
+/*links dentro de li*/
+
+.submenu li a {
+    color: var(--cor-de-fondo6);
+}
+
+
+/*o pasar sobre os li que teñen submenu*/
+
+.secciones li:hover .submenu {
+    visibility: visible;
+}
+
+
+/*clase titulos*/
+
+.titulos {
+    text-align: center;
+    font-family: var(--fonte);
+    font-size: 3em;
+}
+
+
+/*clase seccion*/
+
+.seccion {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*lista da clase seccion*/
+
+.seccion ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+
+/*imaxes dentro de seccion*/
+
+.seccion ul li img {
+    width: 400px;
+}
+
+
+/*clase precio*/
+
+.precio {
+    font-size: var(--tamano-2em);
+}
+
+
+/*clase ul_total*/
+
+.ul_total {
+    padding-top: 100px;
+}
+
+.ul_total li {
+    padding: 5px 0;
+}
+
+/*clase botoncomprar*/
+
+.botoncomprar {
+    background-color: var(--cor-de-fondo3);
+}
+
+
+/*id videos*/
+
+#videos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*lista do id videos*/
+
+#videos ul {
+    flex: 1;
+    list-style: none;
+}
+
+
+/*medidas do iframe dentro de videos*/
+
+#videos iframe {
+    width: 560px;
+    height: 315px;
+}
+
+
+/*clase enviodevolucion*/
+
+.enviodevolucion img {
+    width: 100%;
+}
+
+
+/*clase spam*/
+
+.spam p {
+    display: inline;
+    margin-right: 25px;
+    font-size: 1.5em;
+}
+
+
+/*clase botonclase*/
+
+.botonclase {
+    background-color: var(--cor-de-fondo);
+}
+
+
+/*titulospequenos*/
+
+.titulospequenos {
+    text-align: center;
+    font-family: var(--fonte);
+    font-size: var(--tamano-2em);
+}
+
+
+/*clase asesoramiento*/
+
+.asesoramiento {
+    font-style: oblique;
+    font-size: 1.2em;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: var(--cor-de-fondo2);
+}
+
+
+/*clase footer*/
+
+.footer {
+    display: block;
+}
+
+
+@media (max-width: 480px) {
+    #videos ul {
+        text-align: center;
+    }
+
+    #videos iframe {
+        width: 280px;
+        height: 157px;
+    }
+}
+
+@media (min-width: 481px) and (max-width:768px) {
+    #videos ul {
+        text-align: center;
+    }
+
+    #videos iframe {
+        width: 364px;
+        height: 204px;
+    }
+}
+
+@media (min-width: 769px) {
+    #videos ul {
+        text-align: center;
+    }
+
+    #videos iframe {
+        width: 448px;
+        height: 252px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-areas: "a b";
+    }
+
+    .a {
+        grid-area: a;
+        margin-right: 20px;
+    }
+
+    .b {
+        grid-area: b;
+    }
+}

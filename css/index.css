@@ -1,0 +1,224 @@
+:root {
+    --cor-de-fondo: pink;
+    --cor-de-fondo1: red;
+    --cor-de-fondo2: rgb(0, 162, 232);
+    --cor-de-fondo3: skyblue;
+    --cor-de-fondo4: #353535;
+    --cor-de-fondo5: #CE7D35;
+    --cor-de-fondo6: #fff;
+    --fonte: Brush Script MT;
+    --tamano-2em: var(--tamano-2em);
+}
+
+
+/*header*/
+
+header {
+    width: 100%;
+    background-color: var(--cor-de-fondo);
+}
+
+
+/*h1 do header*/
+
+header h1 {
+    margin: auto;
+    top: 0px;
+    text-align: center;
+    font-size: 4em;
+    font-family: var(--fonte);
+}
+
+
+/* clase navegador*/
+
+.navegador {
+    position: sticky;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    background: var(--cor-de-fondo1);
+}
+
+
+/*lista da clase navegador*/
+
+.navegador ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+/*elementos li*/
+
+.secciones li {
+    position: relative;
+    display: inline-block;
+}
+
+
+/*links dentro de li*/
+
+.secciones li a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--cor-de-fondo4);
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+
+/*o pasar sobre os links dentro de li*/
+
+.secciones li a:hover {
+    color: var(--cor-de-fondo5);
+}
+
+
+/*clase submenu*/
+
+.submenu {
+    position: absolute;
+    background-color: var(--cor-de-fondo1);
+    visibility: hidden;
+    padding-left: 0;
+    padding-top: 1rem;
+}
+
+
+/*links dentro de li*/
+
+.submenu li a {
+    color: var(--cor-de-fondo6);
+}
+
+
+/*o pasar sobre os li que teñen submenu*/
+
+.secciones li:hover .submenu {
+    visibility: visible;
+}
+
+
+/*clase titulos*/
+
+.titulos {
+    text-align: center;
+    font-family: var(--fonte);
+    font-size: 3em;
+}
+
+
+/*clase novedades. clase masvendidos*/
+
+.novedades, .masvendidos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*lista da clase novedades, lista da clase masvendidos*/
+
+.novedades ul, .masvendidos ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+}
+
+
+/*imaxes dentro de novedades, imaxes dentro de masvendidos*/
+
+.novedades ul li img, .masvendidos ul li img {
+    width: 200px;
+}
+
+
+/*clase precio*/
+
+.precio {
+    font-size: var(--tamano-2em);
+    padding-top: 1em;
+}
+
+
+/*clase enviodevolucion*/
+
+.enviodevolucion img {
+    width: 100%;
+}
+
+
+/*clase spam*/
+
+.spam p {
+    display: inline;
+    margin-right: 25px;
+    font-size: 1.5em;
+}
+
+
+/*clase botonclase*/
+
+.botonclase {
+    background-color: var(--cor-de-fondo);
+}
+
+
+/*titulospequenos*/
+
+.titulospequenos {
+    text-align: center;
+    font-family: var(--fonte);
+    font-size: var(--tamano-2em);
+}
+
+
+/*clase asesoramiento*/
+
+.asesoramiento {
+    font-style: oblique;
+    font-size: 1.2em;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: var(--cor-de-fondo2);
+}
+
+
+/*clase footer*/
+
+.footer {
+    display: block;
+}
+
+
+@media (max-width:768px) {
+    header {
+        width: 100%;
+    }
+    .masvendidos ul, .novedades ul {
+        text-align: center;
+        padding: 1em;
+        margin: 1em;
+        border: 1px solid var(--cor-de-fondo);
+    }
+}
+
+@media (min-width:769px) {
+    .footer {
+        display: grid;
+        grid-template-areas: "a b";
+    }
+
+    .a {
+        grid-area: a;
+        margin-right: 20px;
+    }
+
+    .b {
+        grid-area: b;
+    }
+}
